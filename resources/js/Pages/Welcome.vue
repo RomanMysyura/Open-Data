@@ -1,6 +1,6 @@
 <script setup>
-import { Head, Link } from '@inertiajs/vue3';
-
+import { Head } from '@inertiajs/vue3';
+import Menu from '@/Components/Menu.vue';
 defineProps({
     canLogin: {
         type: Boolean,
@@ -16,12 +16,19 @@ defineProps({
         type: String,
         required: true,
     },
+
+    
 });
+
+
+
 </script>
 
 <template>
-    <Head title="Welcome" />
-
+    
+    <Menu/>
+    
+    
     <div
         class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white"
     >
@@ -34,18 +41,7 @@ defineProps({
             >
 
             <template v-else>
-                <Link
-                    :href="route('login')"
-                    class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                    >Log in</Link
-                >
-
-                <Link
-                    v-if="canRegister"
-                    :href="route('register')"
-                    class="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                    >Register</Link
-                >
+              
             </template>
         </div>
 
@@ -182,7 +178,7 @@ defineProps({
                                 </svg>
                             </div>
 
-                            <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel News</h2>
+                            <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white"> sfgsgdsf News</h2>
 
                             <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                                 Laravel News is a community driven portal and newsletter aggregating all of the latest
